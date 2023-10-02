@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.scss'
+import Pages from './components/Pages'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+      <div className='head'>
+          <h1>Featured Listed Property</h1>
+          <p>Real estate can be bought, sell, leased, or rented and can be <br/> valuable Investment opportunity. The value of real estate can be... </p>
+      </div>
+
+      <div className='nav'>
+        <button>Paris</button>
+        <button>London</button>
+        <button>Mumbai</button>
+        <button>Delhi</button>
+        <button className='viewBtn'>View All</button>
+      </div>
+
+      <div className='page'>
+        <Pages/>
+      </div>
+
+      <div className='showMoreBtn'>
+        <button >Show More</button>
+      </div>
+      
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
