@@ -4,12 +4,23 @@ import { BiMap } from "react-icons/bi";
 import { LiaBedSolid } from "react-icons/lia";
 import { LiaBathSolid } from "react-icons/lia";
 import { LiaArrowsAltSolid } from "react-icons/lia";
+import {AiOutlineHeart} from 'react-icons/ai'
 
 const Cards = () => {
   return (
     <div>
       <div className="card">
+        <div className="image-container">
         <img src="https://cdn.pixabay.com/photo/2016/11/17/09/28/hotel-1831072_640.jpg" />
+          <div className="overlay-text">
+            <h5>For Rent</h5>
+          </div>   
+          <div className="heart-icon">
+            <AiOutlineHeart className="heartIcon"/>
+          </div>       
+        </div>
+
+        
         <div className="card-body">
           <p>
             <BiMap /> 8558 Pecan St.
@@ -38,6 +49,11 @@ const Cards = () => {
               <div class="name">732 sft</div>
             </div>
             
+          </div>
+
+          <div className="princeAndReadMore">
+            <h5>$5,674</h5>/month
+            <button>Read More</button>
           </div>
         </div>
       </div>

@@ -1,12 +1,12 @@
 import React from 'react'
 import Rows from './Rows'
 
-const Pages = () => {
+const Pages = ({ showMoreStatus }) => {
   return (
     <div className='rows'>
       <Rows/>
       <Rows/>
-      <Rows/>
+      {showMoreStatus && <Rows/>}
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Cards from './Cards'
 
 const Rows = () => {
   return (
-    <div>
+    <div className='cardsInRow'>
       <Cards/>
       <Cards/>
       <Cards/>

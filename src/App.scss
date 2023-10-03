@@ -1,6 +1,8 @@
 .main{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #F1F0E8;
-    margin: 50px 100px;
+    font-size: 15px;
 
     .head{
         display: flex;
@@ -19,27 +21,53 @@
     .nav{
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 15px;
+        padding: 20px;
+        margin: 0px 130px;
+        border: none;
 
         button{
-            border-radius: 20px;
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            background-color: #E4F1FF;
+            border: none;
             cursor: pointer;
+
+            &:active{
+                background-color: blue;
+                color: white;
+            }
         }
+
 
         .viewBtn{
             margin-left: auto;
+            border: solid blue;
+            color: blue;
         }
     }
 
     .page{
         display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        flex-direction: row;
     }
 }
 
 .rows{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+.cardsInRow{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,17 +77,68 @@
 .card{
     width: 400px;
     margin: 10px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 20px;
     object-fit: cover;
     border: 1px solid wheat;
 
-    img{
-        border-radius: 20px;
-        padding: 3px;
-        width: 360px;
-        cursor: pointer;
+
+
+
+    .image-container{
+        position: relative;
+
+        img{
+            border-radius: 20px;
+            object-fit: cover;
+            width: 370px;
+            cursor: pointer;
+            
+        }
+
+        .overlay-text {
+            position: absolute;
+            bottom: 80%; 
+            left: 5%; 
+            text-align: center;
+            width: 25%;
+            height: 13%;
+            background-color: white; 
+            color: blue; 
+            border-radius: 20px;
+            padding:  2px 15px;
+
+            
+            
+            h5{
+                font-size: 15px;
+                margin-top: 6px;
+            }
     }
+
+    .heart-icon{
+        position: absolute;
+        bottom: 80%; 
+        left: 87%; 
+        display: flex;
+        align-items: center;
+        width: 9%;
+        height: 13%;
+        background-color: white; 
+        color: blue; 
+        border-radius: 30px;
+
+        .heartIcon{
+            margin-left: 9px;
+        }
+    }
+
+    .heart-icon{
+        bottom: 80%;
+        right: 100%;
+    }
+}
+
 
     .card-icon {
         display: flex;
@@ -68,11 +147,30 @@
         gap: 30px;
 
         .icon {
-            margin: 5px; 
+            margin: 4px; 
           }
       }
 
+      .princeAndReadMore{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 5px;
+        
+        h5{
+            color: blue;
+            margin-top: auto;
+        }
 
+        button{
+            padding: 6px 20px;
+            margin-left: auto;
+            border-radius: 25px;
+            cursor: pointer;
+            color: blue;
+        }
+      }
 }
 
 .showMoreBtn{
@@ -82,11 +180,24 @@
     
 
     button{
+        display: flex;
+        align-items: center;
+
         background-color: blue;
         color: white;
         border: none;
-        padding: 5px 15px ;
+        padding: 7px 15px ;
         border-radius: 20px;
         cursor: pointer;
+
+        button.active{
+            background-color: blue;
+        }
+
+        .showMoreBtnIcon{
+            margin-right: 5px;
+        }
     }
+
+    
 }
