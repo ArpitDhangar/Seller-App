@@ -1,9 +1,10 @@
 import React from 'react'
+import Pages from '../Pages'
 
 const London = () => {
   return (
     <div>
-      London
+      <Pages />
     </div>
   )
 }

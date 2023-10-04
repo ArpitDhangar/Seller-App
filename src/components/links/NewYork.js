@@ -1,12 +1,12 @@
 import React from 'react'
 import Pages from '../Pages'
 
-const Paris = () => {
+const NewYork = ({props}) => {
   return (
     <div>
-      <Pages/>
+      <Pages />
     </div>
   )
 }
 
-export default Paris
+export default NewYork

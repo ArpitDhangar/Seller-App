@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
 import './App.scss'
-import Pages from './components/Pages'
+// import Pages from './components/Pages'
 import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 import {GiSandsOfTime} from 'react-icons/gi'
+import {Route, Routes, NavLink} from 'react-router-dom';
+import NewYork from './components/links/NewYork'
+import London from './components/links/London'
+import Mumbai from './components/links/Mumbai'
+import Paris from './components/links/Paris'
 
 const App = () => {
 
@@ -22,21 +27,43 @@ const App = () => {
 
 
       <div className='nav'>
-        <button >New York</button>
-        <button>Mumbai</button>
-        <button>Paris</button>
-        <button>London</button>
+        <div className='nav-link'>
+        <NavLink to='/NewYork'>New York</NavLink>
+        </div>
+        <div className='nav-link'>
+        <NavLink to='/Mumbai'>Mumbai</NavLink>
+        </div>
+        <div className='nav-link'>
+        <NavLink to='/Paris'>Paris</NavLink>
+        </div>
+        <div className='nav-link'>
+        <NavLink to='/London'>London</NavLink>
+        </div>
         <button className='viewBtn'>View All  {<HiOutlineArrowNarrowRight/>}</button>
       </div>
 
 
       <div className='page'>
-        <Pages showMoreStatus={showMore}/>
+      <Routes>
+        <Route path='/london' Component={London} showMoreStatus={showMore}/> 
+      </Routes>
+      <Routes>
+        <Route path='/NewYork' Component={NewYork} showMoreStatus={showMore}/> 
+      </Routes>
+      <Routes>
+        <Route path='/Mumbai' Component={Mumbai} showMoreStatus={showMore}/> 
+      </Routes>
+      <Routes>
+        <Route path='/Paris' Component={Paris} showMoreStatus={showMore}/> 
+      </Routes>
       </div>
 
       <div className='showMoreBtn'>
         <button onClick={toggleShowMore}><GiSandsOfTime className='showMoreBtnIcon'/>{showMore ? 'Show Less' : 'Show More'}</button>
       </div>
+
+
+
 
     </div>
 

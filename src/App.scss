@@ -26,7 +26,25 @@
         margin: 0px 130px;
         border: none;
 
-        button{
+
+        .nav-link{
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            background-color: #E4F1FF;
+            border: none;
+            cursor: pointer;
+
+            &:active{
+                background-color: blue;
+                color: white;
+            }
+        }
+
+        button {
             border-radius: 25px;
             padding: 8px 25px;
             display: flex;
